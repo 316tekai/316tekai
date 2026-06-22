@@ -1,0 +1,9 @@
+{
+  "name": "316-tek-ai-solutions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "316 Tek AI Solutions website",
+  "dependencies": {
+    "nodemailer": "^7.0.3"
+  }
+}
