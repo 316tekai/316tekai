@@ -55,10 +55,12 @@
       backdrop-filter: blur(12px);
     }
     .nav { height: 76px; display: flex; align-items: center; justify-content: space-between; }
-    .brand { display: flex; align-items: baseline; gap: 8px; white-space: nowrap; }
-    .brand-main { font-size: 20px; font-weight: 800; letter-spacing: -.6px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
+    .brand-icon { width: 38px; height: 38px; flex: 0 0 auto; filter: drop-shadow(0 5px 12px rgba(21,109,255,.22)); }
+    .brand-copy { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
+    .brand-main { font-size: 19px; font-weight: 800; letter-spacing: -.55px; }
     .site-header.scrolled .brand-main { color: var(--blue); }
-    .brand-sub { color: #adb7c8; font-size: 12px; }
+    .brand-sub { margin-top: 4px; color: #adb7c8; font-size: 10px; letter-spacing: .15px; }
     .site-header.scrolled .brand-sub { color: #718096; }
     .nav-links { display: flex; align-items: center; gap: 27px; }
     .nav-links > a:not(.button) { font-size: 14px; font-weight: 500; }
@@ -715,8 +717,10 @@
       .container { width: calc(100% - 32px); }
       .site-header, .nav { height: 64px; }
       .nav-links { top: 64px; left: 16px; right: 16px; }
-      .brand-main { font-size: 18px; }
-      .brand-sub { font-size: 11px; }
+      .brand { gap: 8px; }
+      .brand-icon { width: 34px; height: 34px; }
+      .brand-main { font-size: 17px; }
+      .brand-sub { margin-top: 3px; font-size: 9px; }
       .product-hero { padding: 98px 0 62px; }
       .product-hero h1 { font-size: 39px; line-height: 1.12; letter-spacing: -1.7px; }
       .hero-text { font-size: 15px; }
@@ -763,7 +767,9 @@
     }
 
     @media (max-width: 380px) {
-      .brand-sub { display: none; }
+      .brand-icon { width: 31px; height: 31px; }
+      .brand-main { font-size: 16px; }
+      .brand-sub { display: block; font-size: 8px; }
       .product-hero h1 { font-size: 35px; }
       .capability-list { grid-template-columns: 1fr; }
       .demo-conversation { min-height: 330px; max-height: 330px; }
@@ -783,8 +789,8 @@
   <header class="site-header" id="siteHeader">
     <div class="container nav">
       <a class="brand" href="index.html" aria-label="316 Tek home">
-        <span class="brand-main">316 Tek</span>
-        <span class="brand-sub">AI Solutions</span>
+        <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#168eff" d="M24 3 43 14 24 25 5 14Z"/><path fill="#0878f5" d="M5 14 24 25v20L5 34Z"/><path fill="#064cc9" d="M43 14 24 25v20l19-11Z"/><path fill="#8dd9ff" d="m24 13 9 5-9 5-9-5Z"/><path fill="#43b8ff" d="m15 18 9 5v10l-9-5Z"/><path fill="#0871e8" d="m33 18-9 5v10l9-5Z"/></svg>
+        <span class="brand-copy"><span class="brand-main">316 Tek</span><span class="brand-sub">AI Solutions</span></span>
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -1016,7 +1022,10 @@
     <div class="container">
       <div class="footer-main">
         <div class="footer-about">
-          <a class="brand" href="index.html"><span class="brand-main">316 Tek</span><span class="brand-sub">AI Solutions</span></a>
+          <a class="brand" href="index.html">
+            <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true"><path fill="#168eff" d="M24 3 43 14 24 25 5 14Z"/><path fill="#0878f5" d="M5 14 24 25v20L5 34Z"/><path fill="#064cc9" d="M43 14 24 25v20l19-11Z"/><path fill="#8dd9ff" d="m24 13 9 5-9 5-9-5Z"/><path fill="#43b8ff" d="m15 18 9 5v10l-9-5Z"/><path fill="#0871e8" d="m33 18-9 5v10l9-5Z"/></svg>
+            <span class="brand-copy"><span class="brand-main">316 Tek</span><span class="brand-sub">AI Solutions</span></span>
+          </a>
           <p class="footer-brand-copy">Helping businesses simplify, automate, and grow with smart technology solutions.</p>
         </div>
         <div>
